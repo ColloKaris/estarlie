@@ -54,13 +54,13 @@ html, body {
 }
 
 /* Headline */
-.headline {
+/* .headline {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: bold;
   color: #203844;
   margin-bottom: 2rem;
   margin-top: -90px;
-}
+} */
 
 /* Services list */
 .services {
@@ -70,6 +70,7 @@ html, body {
   gap: 1rem;
   list-style: none;
   margin-bottom: 2.5rem;
+  margin-top: -70px;
 }
 
 .services li {
