@@ -5,62 +5,71 @@
   box-sizing: border-box;
 }
 
-/* Set full viewport */
+/* Layout & base */
 html, body {
   height: 100%;
   width: 100%;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f7fa; /* Brand dark blue */
-  color: #fdb414;            /* Brand yellow */
+  background-color: #f5f7fa; /* Light background */
+  color: #203844;
 }
 
-/* Center content */
 .overlay {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
 }
 
-/* Main container */
 .content {
-  max-width: 600px;
+  max-width: 900px;
   width: 100%;
 }
 
-/* Logo styling */
+/* Logo */
 .logo {
-  max-width: 150px;
+  max-width: 200px;
+  width: 100%;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Tagline */
-.tagline {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #fdb414;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+/* Tagline image */
+.tagline-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
 }
 
 /* Headline */
 .headline {
-  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 4rem); /* Responsive scaling */
   font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 1rem;
+  color: #203844;
+  margin-bottom: 2rem;
 }
 
-/* Subtext */
-.subtext {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #fdb414;
+/* Services list */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
   margin-bottom: 2rem;
+}
+
+.services li {
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #fdb414;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  background-color: #203844;
+  border-radius: 5px;
 }
 
 /* Contact section */
@@ -68,30 +77,26 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-/* Icons */
 .icon, .phone-number {
-  height: 32px;
+  height: clamp(32px, 4vw, 48px);
   width: auto;
 }
 
-/* Responsive scaling */
-@media (max-width: 480px) {
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .logo {
-    max-width: 100px;
+    max-width: 120px;
   }
 
-  .headline {
-    font-size: 1.5rem;
-  }
-
-  .subtext {
-    font-size: 0.9rem;
-  }
-
-  .icon, .phone-number {
-    height: 24px;
+  .tagline-img {
+    max-width: 200px;
   }
 }
