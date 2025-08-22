@@ -5,12 +5,11 @@
   box-sizing: border-box;
 }
 
-/* Layout & base */
 html, body {
   height: 100%;
   width: 100%;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f7fa; /* Light background */
+  background-color: #f5f7fa;
   color: #203844;
 }
 
@@ -26,27 +25,30 @@ html, body {
 .content {
   max-width: 900px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Logo */
 .logo {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 1.5rem;
-}
-
-/* Tagline image */
-.tagline-img {
-  max-width: 300px;
+  max-width: 400px; /* doubled from 200px */
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
 }
 
+/* Tagline image */
+.tagline-img {
+  max-width: 600px; /* doubled from 300px */
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
+}
+
 /* Headline */
 .headline {
-  font-size: clamp(2rem, 5vw, 4rem); /* Responsive scaling */
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: bold;
   color: #203844;
   margin-bottom: 2rem;
@@ -59,7 +61,7 @@ html, body {
   justify-content: center;
   gap: 1rem;
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .services li {
@@ -77,11 +79,12 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
+/* 🔥 Super-sized contact icons */
 .icon, .phone-number {
-  height: clamp(32px, 4vw, 48px);
+  height: clamp(120px, 12vw, 160px); /* ~10x original */
   width: auto;
 }
 
@@ -93,10 +96,14 @@ html, body {
   }
 
   .logo {
-    max-width: 120px;
+    max-width: 250px;
   }
 
   .tagline-img {
-    max-width: 200px;
+    max-width: 350px;
+  }
+
+  .icon, .phone-number {
+    height: 72px;
   }
 }
