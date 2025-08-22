@@ -1,29 +1,97 @@
-/* Reset default styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+/* Set full viewport */
+html, body {
   height: 100%;
   width: 100%;
-  font-family: sans-serif;
-  background-color: #111;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa; /* Brand dark blue */
+  color: #fdb414;            /* Brand yellow */
+}
+
+/* Center content */
+.overlay {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  padding: 1.5rem;
+  text-align: center;
 }
 
-.container {
-  max-width: 100%;
-  max-height: 100%;
-  padding: 1rem;
+/* Main container */
+.content {
+  max-width: 600px;
+  width: 100%;
 }
 
-.coming-soon-img {
-  max-width: 100%;
+/* Logo styling */
+.logo {
+  max-width: 150px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fdb414;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Headline */
+.headline {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Subtext */
+.subtext {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fdb414;
+  margin-bottom: 2rem;
+}
+
+/* Contact section */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Icons */
+.icon, .phone-number {
+  height: 32px;
+  width: auto;
+}
+
+/* Responsive scaling */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 100px;
+  }
+
+  .headline {
+    font-size: 1.5rem;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+  }
+
+  .icon, .phone-number {
+    height: 24px;
+  }
 }
