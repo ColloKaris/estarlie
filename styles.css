@@ -28,22 +28,29 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  margin-top: 1px; /* Moves everything down slightly */
 }
 
 /* Logo */
 .logo {
-  max-width: 400px; /* doubled from 200px */
+  max-width: 420px;
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
+  margin-top: 3rem; /* Adds space from very top */
+  position: relative;
+  z-index: 2;
 }
 
-/* Tagline image */
+/* Tagline image with overlap */
 .tagline-img {
-  max-width: 600px; /* doubled from 300px */
+  max-width: 300px;
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
+  margin-top: -200px; /* Pulls image upward to overlap logo */
+  margin-bottom: 0px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Headline */
@@ -52,6 +59,7 @@ html, body {
   font-weight: bold;
   color: #203844;
   margin-bottom: 2rem;
+  margin-top: -90px;
 }
 
 /* Services list */
@@ -82,13 +90,13 @@ html, body {
   gap: 2rem;
 }
 
-/* 🔥 Super-sized contact icons */
+/* Contact icons */
 .icon, .phone-number {
-  height: clamp(120px, 12vw, 160px); /* ~10x original */
+  height: clamp(160px, 15vw, 220px);
   width: auto;
 }
 
-/* Responsive adjustments */
+/* Responsive tweaks */
 @media (max-width: 600px) {
   .services {
     flex-direction: column;
@@ -96,14 +104,15 @@ html, body {
   }
 
   .logo {
-    max-width: 250px;
+    max-width: 220px;
   }
 
   .tagline-img {
-    max-width: 350px;
+    max-width: 200px;
+    margin-top: -40px;
   }
 
   .icon, .phone-number {
-    height: 72px;
+    height: 80px;
   }
 }
