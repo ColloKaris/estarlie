@@ -35,7 +35,7 @@ html, body {
   max-width: 400px; /* doubled from 200px */
   width: 100%;
   height: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Tagline image */
@@ -43,7 +43,7 @@ html, body {
   max-width: 600px; /* doubled from 300px */
   width: 100%;
   height: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 /* Headline */
