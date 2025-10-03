@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title='Services'>
+
+  <!-- HERO -->
+ <section class="bg-white min-h-[80vh] py-32 lg:py-40 flex items-center">
+  <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center max-w-6xl">
+
+    <!-- Left: Text -->
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold text-[#203844] leading-tight mb-6">
+        Our Services
+      </h1>
+      <p class="mt-4 text-2xl text-gray-700 max-w-xl">
+        360° branding & printing solutions — strategy, design, production, and activation under one roof.
+      </p>
+    </div>
+
+    <!-- Right: Image -->
+    <div>
+      <img
+        src="https://res.cloudinary.com/dvmtn1i7u/image/upload/v1759520292/14974_pqfqdw.jpg"
+        alt="Our Services Illustration"
+        class="w-full rounded-lg shadow-lg scale-100 md:scale-105"
+        loading="lazy"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- SERVICE BLOCKS -->
+  <section class="bg-[#f9fafb] py-36 border-t border-gray-200">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl">
+      <div class="bg-white p-8 shadow rounded-lg border-t-4 border-[#fdb414] hover:shadow-md hover:-translate-y-1 transition">
+        <h3 class="font-semibold text-2xl text-[#203844]">Design & Branding</h3>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+          Logos, narratives, and visual systems tailored to your goals.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 shadow rounded-lg border-t-4 border-[#fdb414] hover:shadow-md hover:-translate-y-1 transition">
+        <h3 class="font-semibold text-2xl text-[#203844]">Print Production</h3>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+          Stationery, publications, and packaging with premium quality.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 shadow rounded-lg border-t-4 border-[#fdb414] hover:shadow-md hover:-translate-y-1 transition">
+        <h3 class="font-semibold text-2xl text-[#203844]">Signage & Installation</h3>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+          3D LED, vehicle branding, and outdoor signage that stands out.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 shadow rounded-lg border-t-4 border-[#fdb414] hover:shadow-md hover:-translate-y-1 transition">
+        <h3 class="font-semibold text-2xl text-[#203844]">Promotional Merchandising</h3>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+          Apparel, gifts, and gadgets that represent your brand.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 shadow rounded-lg border-t-4 border-[#fdb414] hover:shadow-md hover:-translate-y-1 transition">
+        <h3 class="font-semibold text-2xl text-[#203844]">POS & Activations</h3>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+          Vibrant displays and activations that captivate and engage your audience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#fdb414] text-[#203844] py-36 text-center">
+    <div class="container mx-auto px-4 max-w-2xl">
+      <h2 class="text-4xl font-bold leading-snug">Ready to Elevate Your Brand?</h2>
+      <p class="mt-4 text-lg">Let’s transform your vision into reality.</p>
+      <a
+        href="/contact"
+        class="mt-10 inline-block bg-[#203844] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a2c33] transition text-lg"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

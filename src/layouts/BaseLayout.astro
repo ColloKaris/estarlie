@@ -1,0 +1,31 @@
+---
+// Import global styles (includes Tailwind)
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { title = "Estarlie" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link 
+      rel="icon" 
+      type="image/png" 
+      href="https://res.cloudinary.com/dvmtn1i7u/image/upload/v1759208164/favicon_lysc4w.ico" 
+      sizes="32x32"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col font-sans bg-[#F8F9FA] text-[#1C1C1C]">
+    <Header />
+    
+    <main class="flex-1 pt-[72px]">
+      <slot />
+    </main>
+    
+    <Footer />
+  </body>
+</html>

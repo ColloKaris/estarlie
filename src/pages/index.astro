@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// List of brand logos
+const brandLogos = [
+  'Untitled-2_rkasuz.png', 'N_uca8fb.png', 'L_zaauzv.png', 'J_rdex82.png',
+  'K_kxjpmp.png', 'I_kojrs8.png', 'H_xzsyvc.png', 'F_olgje7.png',
+  'G_s76oe8.png', 'E_zuk0z4.png', 'D_a1jrax.png', 'C_i7vpkm.png',
+  'B_l9nkpn.png', 'A_urkpks.png', 'C-2_mlki8c.png', 'artcsffe_bakeqk.png'
+];
+---
+
+<BaseLayout title="Home">
+
+  <!-- HERO -->
+  <section class="relative bg-[#203844] text-white min-h-[80vh] py-32 lg:py-48 flex items-center">
+    <img
+      src="https://res.cloudinary.com/dvmtn1i7u/image/upload/v759209680/Background_pmypue.png"
+      alt="Abstract hero background illustration"
+      class="absolute inset-0 w-full h-full object-cover opacity-20"
+      loading="lazy"
+    />
+    <div class="relative container mx-auto px-4 text-center max-w-3xl">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+        Design to Delivery
+      </h1>
+      <p class="mt-6 text-xl md:text-2xl text-gray-200">
+        We help visionary brands craft enduring legacies through strategy and design.
+      </p>
+      <a
+        href="/contact"
+        class="mt-8 inline-block bg-[#fdb414] text-[#203844] px-8 py-4 rounded-lg font-semibold hover:bg-[#fbbf24] transition"
+      >
+        Let's Talk
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="bg-white py-32 lg:py-40">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h1 class="text-4xl md:text-6xl font-bold text-[#203844] text-center leading-tight mb-8">
+  What We Deliver
+</h1>
+
+      <div class="grid md:grid-cols-3 gap-12 text-[#203844]">
+        <div class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition text-center md:text-left max-w-sm mx-auto">
+          <img
+            src="https://res.cloudinary.com/dvmtn1i7u/image/upload/v1759337507/03_d9wyvy.png"
+            alt="Icon representing Strategic Branding"
+            class="mx-auto md:mx-0 h-24 w-24 mb-4"
+            loading="lazy"
+          />
+          <h3 class="text-2xl font-semibold">Strategic Branding</h3>
+          <p class="mt-4 text-lg text-gray-700">
+            We craft compelling narratives and visual identities that define your brand.
+          </p>
+        </div>
+
+        <div class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition text-center md:text-left max-w-sm mx-auto">
+          <img
+            src="https://res.cloudinary.com/dvmtn1i7u/image/upload/v1759337506/02_yzyrn9.png"
+            alt="Icon representing High-Quality Printing"
+            class="mx-auto md:mx-0 h-24 w-24 mb-4"
+            loading="lazy"
+          />
+          <h3 class="text-2xl font-semibold">High-Quality Printing</h3>
+          <p class="mt-4 text-lg text-gray-700">
+            Exceptional offset and digital materials tailored to your business goals.
+          </p>
+        </div>
+
+        <div class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition text-center md:text-left max-w-sm mx-auto">
+          <img
+            src="https://res.cloudinary.com/dvmtn1i7u/image/upload/v1759337507/01_krhhfe.png"
+            alt="Icon representing Innovative Signage"
+            class="mx-auto md:mx-0 h-24 w-24 mb-4"
+            loading="lazy"
+          />
+          <h3 class="text-2xl font-semibold">Innovative Signage</h3>
+          <p class="mt-4 text-lg text-gray-700">
+            From 3D LED to fleet branding, we make sure your brand stands out loud and clear.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED BRANDS -->
+<section class="bg-[#fffafb] py-36 lg:py-44 border-t border-gray-200" aria-label="Trusted by Leading Brands">
+  <div class="container mx-auto px-4 text-center max-w-5xl">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#203844]">
+      Trusted by Leading Brands
+    </h2>
+    <ul class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-10 gap-y-14 mt-14">
+      {brandLogos.map((file, index) => (
+        <li role="img" aria-label={`Brand logo ${index + 1}`}>
+          <img
+            src={`https://res.cloudinary.com/dvmtn1i7u/image/upload/v1759338156/${file}`}
+            alt={`Logo of Brand ${index + 1}`}
+            class="mx-auto h-16 object-contain opacity-90"
+            loading="lazy"
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+
+  <!-- CTA SECTION -->
+  <section class="bg-[#fdb414] text-[#203844] py-32 lg:py-40 text-center">
+    <div class="container mx-auto px-4 max-w-2xl">
+      <img
+        src="https://res.cloudinary.com/dvmtn1i7u/image/upload/v1759503680/shutterstock_2350774235_wjiagj.png"
+        alt="Creative concept illustration"
+        class="mx-auto mb-8 w-/3 max-w-md"
+        loading="lazy"
+      />
+      <h2 class="text-4xl font-bold leading-snug">Bring Your Vision to Life</h2>
+      <p class="mt-4 text-3xl">
+        We don't do 'meh'. We do memorable.
+      </p>
+      <a
+        href="/contact"
+        class="mt-10 inline-block bg-[#203844] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a2c33] transition"
+      >
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
